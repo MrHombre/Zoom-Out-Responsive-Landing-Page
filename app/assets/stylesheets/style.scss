@@ -150,7 +150,7 @@ Main components
 #cd-intro {
   position: relative;
   height: $intro-height-S;
-  margin-top: $header-height-S; //note change here do to an error
+  margin-top: $header-height-S; 
   z-index: index($elements, intro-image);
 
   #cd-intro-background {
