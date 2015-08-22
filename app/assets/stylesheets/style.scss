@@ -100,5 +100,36 @@ Main Components
     }
   }
 
-  
+  a {
+    display: block;
+    height: $header-height-S;
+    line-height: $header-height-S;
+    padding-left: 5%;
+    background: $background;
+    border: 1px solid lighten($background, 3%);
+    color: #fff;
+  }
+
+  @include MQ(M) {
+    width: auto;
+    height: auto;
+    background: auto;
+    cursor: auto;
+
+    ul {
+      position: static;
+      width: auto;
+      @include transform(translateY(0));
+      line-height: $header-height-M;
+
+      &.is-visible {
+        @include transform(translateY(0));
+      }
+    }
+
+    li {
+      display: inline-block;
+      margin-left: 1em;
+    }
+  }
 }
