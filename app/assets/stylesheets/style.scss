@@ -146,3 +146,55 @@ Main components
 		}
 	}
 }
+
+#cd-intro {
+  position: relative;
+  height: $intro-height-S;
+  margin-top: $header-height-S; //note change here do to an error
+  z-index: index($elements, intro-image);
+
+  #cd-intro-background {
+    height: 100%;
+    width: 100%;
+    background: url('ocean_coast.jpg') no-repeat center center;
+		background-size: cover;
+		box-shadow: 0 0 30px rgba(#000, .5);
+  }
+
+  #cd-intro-tagline {
+    position: absolute;
+    width: 90%;
+    max-width: $L;
+    @include center;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    @include font-size(24px);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(#000, .2);
+  }
+
+  @include MQ(M) {
+    height: $intro-height-M;
+    margin-top: $header-height-M;
+
+    h1 {
+      @include font-size(30px);
+    }
+  }
+
+  @include MQ(L) {
+    position: fixed;
+    top: $header-height-M;
+    left: 0;
+    width: 100%;
+    height: $intro-height-L;
+    margin-top: 0;
+
+    h1 {
+      @include font-size(32px);
+    }
+  }
+}
